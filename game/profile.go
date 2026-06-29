@@ -2,7 +2,6 @@ package game
 
 import (
 	"encoding/json"
-	"io/ioutil"
 	"os"
 
 	"github.com/gdamore/tcell"
@@ -79,7 +78,7 @@ func WriteProfiles(profiles []*Profile, file string) {
 	}
 
 	data := EncodeProfiles(profiles)
-	_ = ioutil.WriteFile(file, data, 0644)
+	_ = os.WriteFile(file, data, 0644)
 }
 
 func CreateProfile(g *Game) int {

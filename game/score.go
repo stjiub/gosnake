@@ -2,10 +2,10 @@ package game
 
 import (
 	"encoding/json"
-	"github.com/google/logger"
-	"io/ioutil"
 	"os"
 	"sort"
+
+	"github.com/google/logger"
 )
 
 // Score is a struct that keeps track of a specific high score
@@ -174,7 +174,7 @@ func WriteScores(newScores1, newScores2 []*Score, file string) {
 	}
 
 	data := EncodeScores(newScores1, newScores2)
-	_ = ioutil.WriteFile(file, data, 0644)
+	_ = os.WriteFile(file, data, 0644)
 }
 
 // GetScores is used to make a list of all the current scores to view

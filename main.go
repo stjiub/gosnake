@@ -3,9 +3,7 @@ package main
 import (
 	"flag"
 	"log"
-	"math/rand"
 	"os"
-	"time"
 
 	"github.com/google/logger"
 	"github.com/stjiub/gosnake/game"
@@ -28,9 +26,6 @@ var (
 
 func main() {
 	flag.Parse()
-
-	// Set rand seed
-	rand.Seed(time.Now().UnixNano())
 
 	// Set logging
 	lf, err := os.OpenFile(logFile, os.O_RDWR|os.O_CREATE|os.O_WRONLY, 0660)

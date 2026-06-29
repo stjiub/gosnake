@@ -1,9 +1,10 @@
 package game
 
 import (
-	"github.com/google/logger"
-	"io/ioutil"
+	"io"
 	"os"
+
+	"github.com/google/logger"
 )
 
 // readData reads game data from a JSON file and returns the byteData
@@ -34,7 +35,7 @@ func ReadFile(file string) []byte {
 	}()
 
 	// Read bytes of data from JSON file
-	byteValue, _ := ioutil.ReadAll(jsonFile)
+	byteValue, _ := io.ReadAll(jsonFile)
 
 	return byteValue
 }

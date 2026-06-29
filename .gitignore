@@ -1,0 +1,11 @@
+# Compiled binaries
+*.exe
+*.exe~
+
+# Module download cache
+vendor/
+
+# Runtime-generated files
+log.txt
+hs.json
+profiles.json
